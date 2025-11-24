@@ -1,9 +1,14 @@
 # List of items to search through
-items = [43,7,6,19,9,15]
+import random
+import time
+
+
+y = int(input("Enter list length."))
+start = time.time()
+items = [random.randint(0,100) for x in range(y)]
 length = len(items)-1
 
 # Initialise for loop later
-index = 0
 swapped = True
 
 # If a swap has happened, do a pass
@@ -23,6 +28,8 @@ while (swapped) and length > 0:
             # Tells the code that a swap did happen, and another one will need to
             swapped = True
     length = length - 1
-    print(items)
-
+ 
+end = time.time()
+speed = (end - start)
+print(f"Time taken: {speed}")
 print(items)
