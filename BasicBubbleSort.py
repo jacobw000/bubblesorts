@@ -1,5 +1,12 @@
+import random
+import time
+
 # List of items to search through
-items = [43,7,6,19,9,15]
+y = int(input("Enter list length."))
+# Starts a timer
+start = time.time()
+# Generates a list of 0-100 numbers with y data items 
+items = [random.randint(0,100) for x in range(y)]
 length = len(items)-1
 
 # Initialise for loop later
@@ -23,4 +30,11 @@ while (swapped):
             # Tells the code that a swap did happen, and another one will need to
             swapped = True
 
+# Ends the timer
+end = time.time()
+# Makes a variable with the length taken for the search
+speed = (end - start)
+print(f"Time taken: {speed}")
 print(items)
+
+
