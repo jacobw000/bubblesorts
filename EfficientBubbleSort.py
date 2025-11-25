@@ -1,10 +1,11 @@
-# List of items to search through
 import random
 import time
 
-
+# List of items to search through
 y = int(input("Enter list length."))
+# Starts a timer
 start = time.time()
+# Generates a list of 0-100 numbers with y data items 
 items = [random.randint(0,100) for x in range(y)]
 length = len(items)-1
 
@@ -29,7 +30,9 @@ while (swapped) and length > 0:
             swapped = True
     length = length - 1
  
+# Ends the timer
 end = time.time()
+# Makes a variable with the length taken for the search
 speed = (end - start)
 print(f"Time taken: {speed}")
 print(items)
